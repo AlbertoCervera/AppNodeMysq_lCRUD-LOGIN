@@ -1,0 +1,43 @@
+
+
+
+
+  <div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card text-center">
+          {{#if msg}}
+
+
+            <h1>{{msg}}</h1>
+
+          {{/if}}
+        <div class="card-body">
+          <h3>inserta tu nueva contraseña</h3>
+
+          <form action="/autentication/changepass/{{id}}" method="POST">
+          
+         <input type="password" name="pass" placeholder="pass">
+
+
+         
+
+        <div>
+
+         <button class="btn btn-success mt-2">enviar</button>
+        </div>
+
+         </form>
+
+        
+         
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,35 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card text-center">
+          {{#if msg}}
+
+
+            <h1>{{msg}}</h1>
+
+          {{/if}}
+        <div class="card-body">
+          <h3>dinos tu username</h3>
+
+          <form action="/autentication/recu" method="POST">
+          
+         <input type="text" name="user" placeholder="username">
+
+
+         
+
+        <div>
+
+         <button class="btn btn-primary  mt-2">enviar</button>
+        </div>
+
+         </form>
+
+         <a href="/autentication/signin"></a>
+         
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
