@@ -89,7 +89,6 @@ router.post("/validjwt",async(req,res)=>{
   
   if(valid){
 
-    console.log(valid )
     return res.redirect(`/autentication/changepass/${valid}`)
   }else{
 

@@ -43,7 +43,6 @@ router.post('/add',isLoggedIn,async (req,res,next)=>{
 router.get('/',isLoggedIn,async (req, res, next) =>{
   
   const links  = await pool.query("SELECT * FROM links")
-  console.log(links)
 
   //res.send("las listas iran aqui")
   res.render("links/list",{links})
@@ -69,7 +68,6 @@ router.get('/edit/:id',isLoggedIn,async (req, res, next) =>{
   const {id} = req.params
 
   const idencontrada = await pool.query("SELECT * FROM links WHERE  id = ? AND  user_id  = ? ", [id,req.user.id])
-  console.log(idencontrada)
   //await pool.query('DELETE  FROM links WHERE id = ?' ,[id] )
   
   //res.send("las listas iran aqui")
